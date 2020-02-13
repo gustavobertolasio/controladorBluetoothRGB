@@ -5,17 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/fundo">
 
     <com.madrapps.pikolo.RGBColorPicker
         android:id="@+id/colorpicker"
         android:layout_width="match_parent"
-        android:layout_height="1000px"
-        android:layout_centerHorizontal="true"></com.madrapps.pikolo.RGBColorPicker>
+        android:layout_height="1000px"></com.madrapps.pikolo.RGBColorPicker>
+
     <ListView
         android:id="@+id/list"
         android:layout_width="1000px"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_below="@+id/colorpicker"></ListView>
+    <ImageView
+        android:layout_width="500px"
+        android:layout_height="500px"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/IHI"></ImageView>
 </RelativeLayout>

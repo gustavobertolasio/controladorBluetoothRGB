@@ -7,13 +7,18 @@ import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
 import android.bluetooth.BluetoothSocket;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.ParcelUuid;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+
+import com.madrapps.pikolo.RGBColorPicker;
+import com.madrapps.pikolo.listeners.SimpleColorSelectionListener;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -39,9 +44,26 @@ public class MainActivity extends AppCompatActivity {
 
     private OutputStream outputStream;
     private InputStream inStream;
+
     Object[] devices;
     List<String> names = new ArrayList<>();
     private void init() throws IOException {
+
+
+        final RGBColorPicker picker =  (RGBColorPicker) findViewById(R.id.colorpicker);
+        picker.setColorSelectionListener(new SimpleColorSelectionListener()
+                                         {
+                                             @Override
+                                             public void onColorSelected(int color){
+
+                                                 Log.e("cor",""+ color);
+                                                 imageView.getBackground().setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+
+                                             }
+                                         }
+
+        );
+
         BluetoothAdapter blueAdapter = BluetoothAdapter.getDefaultAdapter();
         if (blueAdapter != null) {
             if (blueAdapter.isEnabled()) {
