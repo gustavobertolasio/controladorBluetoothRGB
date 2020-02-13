@@ -27,16 +27,17 @@
         android:layout_height="500px"
         android:layout_centerInParent="true"
         android:layout_below="@+id/colorpicker"></ListView>
-    <ImageView
+  <!--  <ImageView
         android:layout_width="500px"
         android:layout_height="500px"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/IHI"></ImageView>
+        android:layout_ali  gnParentBottom="true"
+        android:id="@+id/IHI"></ImageView>-->
     <TextView
         android:id="@+id/aviso"
         android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="100px"
+        android:layout_marginBottom="250px"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"></TextView>
 
@@ -49,7 +50,36 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         />
+    <Button
+    android:id="@+id/btn_pair"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Pair"
+    android:layout_centerHorizontal="true"
+    android:layout_toLeftOf="@id/buttonSearch"
+    android:layout_alignParentBottom="true"
+    />
 
+    <Button
+        android:id="@+id/btn_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="-21dp"
+        android:layout_marginBottom="-2dp"
+        android:layout_toRightOf="@id/buttonSearch"
+        android:text="On" />
+
+   <!-- <Button
+        android:id="@+id/btn-off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Off"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/buttonSearch"
+        android:layout_alignParentBottom="true"
+        />-->
 
 <!--    <ListView
         android:id="@+id/listViewDetected"
