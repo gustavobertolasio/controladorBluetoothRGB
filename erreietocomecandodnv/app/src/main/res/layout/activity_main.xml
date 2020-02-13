@@ -11,12 +11,20 @@
     <com.madrapps.pikolo.RGBColorPicker
         android:id="@+id/colorpicker"
         android:layout_width="match_parent"
-        android:layout_height="1000px"></com.madrapps.pikolo.RGBColorPicker>
+        android:layout_height="1000px">
+    </com.madrapps.pikolo.RGBColorPicker>
 
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="450px"
+        android:layout_height="450px"
+        android:layout_marginTop="275px"
+        android:layout_centerHorizontal="true"
+        ></ImageView>
     <ListView
         android:id="@+id/list"
         android:layout_width="1000px"
-        android:layout_height="wrap_content"
+        android:layout_height="500px"
         android:layout_centerInParent="true"
         android:layout_below="@+id/colorpicker"></ListView>
     <ImageView
@@ -24,4 +32,32 @@
         android:layout_height="500px"
         android:layout_alignParentBottom="true"
         android:id="@+id/IHI"></ImageView>
+    <TextView
+        android:id="@+id/aviso"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="100px"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"></TextView>
+
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        />
+
+
+<!--    <ListView
+        android:id="@+id/listViewDetected"
+        android:layout_width="1000px"
+        android:layout_height="500px"
+        android:layout_below="@id/colorpicker"
+        android:layout_centerInParent="true">
+
+    </ListView>-->
+
 </RelativeLayout>
